@@ -1,3 +1,4 @@
+//triangle function
 function calculateTriangleArea(data)
 {
     //get trinagle base value
@@ -24,3 +25,71 @@ function calculateTriangleArea(data)
     
 }
 
+function CalculaterectangleArea()
+{
+        const Wfield=document.getElementById('rectangle-w');
+        const WValue = Wfield.value;
+        const W=parseFloat(WValue);
+        console.log(W);
+
+        const ifield=document.getElementById('rectangle-i');
+        const iValue = ifield.value;
+        const i=parseFloat(iValue);
+        console.log(i);
+
+        const Area= W*i;
+        // console.log(Area);
+        document.getElementById('rectangle-area').innerText=Area;
+
+}
+
+
+
+
+
+
+
+//functional
+
+function calculateParallelogramArea()
+{
+const base =getInputValue('Parallelogram-base');
+// console.log(base);
+
+const height =getInputValue('Parallelogram-height');
+// console.log(height);
+const area =base * height;
+// console.log(area);
+
+setElementInnerText('Parallelogram-area',area)
+
+
+}
+
+function getInputValue(fieldId)
+{
+    const inputField =document.getElementById(fieldId);
+    const inputValueText =inputField.value;
+    const value = parseFloat(inputValueText);
+    return value;
+}
+
+
+//set p,span,div etc 
+
+    function setElementInnerText(elementId,area)
+    {
+
+        const element= document.getElementById(elementId);
+        element.innerText=area;
+    }
+
+
+    //ellips
+    function calculateEllipseArea(){
+        const firstRadius = getInputValue('Ellipse-first-radious');
+        const secondRadius =getInputValue('Ellipse-second-radious');
+
+        const area =3.1416 *firstRadius * secondRadius;
+         setElementInnerText('Ellipse-area',area)
+    }
